@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: coalesceio/coalesce-action
+      - uses: coalesceio/coalesce-action@main
         name: "coa help command"
         with:
           coa-config: "This is a test"
