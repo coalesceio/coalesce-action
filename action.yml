@@ -1,8 +1,8 @@
 name: 'Coalesce'
-description: 'Execute Coalesce Jobs using'
+description: 'Execute Coalesce Jobs using coa CLI.'
 inputs:
   coa-config:
-    description: 'Secret Containing coa config file'
+    description: 'coa config file content'
     required: true
   arguments:
     description: "Arguments to pass to coa"

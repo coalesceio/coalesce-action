@@ -1,0 +1,12 @@
+name: Test action
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: coalesceio/coalesce-action
+        name: "coa help command"
+        with:
+          coa-config: "This is a test"
+          arguments: "--help"

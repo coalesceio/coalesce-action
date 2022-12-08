@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM node:19-alpine3.15
+FROM ghcr.io/coalesceio/coa
 
 COPY entrypoint.sh entrypoint.sh
 
