@@ -1,16 +1,16 @@
-name: Create Release
+name: Create Tag
 on:
   push:
     branches:
       - main
 jobs:
-  create-release:
-    name: Create Release
+  create-tag:
+    name: Create Tag
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: jefflinse/pr-semver-bump@v1
-        name: Create Release
+        name: Create Tag
         with:
           mode: bump
           repo-token: ${{ secrets.GITHUB_TOKEN }}
