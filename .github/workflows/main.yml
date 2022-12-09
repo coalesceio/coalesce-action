@@ -1,9 +1,8 @@
 name: Create Release
 on:
-  pull_request:
+  push:
     branches:
       - main
-    types: [ closed ]
 jobs:
   create-release:
     name: Create Release
@@ -11,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: jefflinse/pr-semver-bump@v1
-        name: Bump and Tag Version
+        name: Create Release
         with:
           mode: bump
           repo-token: ${{ secrets.GITHUB_TOKEN }}
