@@ -1,10 +1,9 @@
 name: Publish release
 on:
-  push:
-    tags:
-      - "*"
+  create
 jobs:
   publish:
+    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
     runs-on: ubuntu-latest
     name: Publish release
     steps:
@@ -13,5 +12,5 @@ jobs:
       - name: Publish release
         uses: eloquent/github-release-action@v3
         with:
-          prerelease: "true"
+          prerelease: "false"
           generateReleaseNotes: "true"
