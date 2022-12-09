@@ -5,13 +5,18 @@ on:
       - main
 jobs:
   create-tag:
-    name: Create Tag
+    name: Create Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: jefflinse/pr-semver-bump@v1
-        name: Create Tag
+        name: Create tag
         with:
           mode: bump
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           with-v: true
+      - name: Publish release
+        uses: eloquent/github-release-action@v3
+        with:
+          prerelease: "false"
+          generateReleaseNotes: "true"
