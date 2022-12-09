@@ -3,4 +3,4 @@ FROM ghcr.io/coalesceio/coa
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT [ "/bin/sh", "/entrypoint.sh" ]
