@@ -1,5 +1,5 @@
 #!/bin/sh
-COA_CONFIG="/coa-config"
+COA_CONFIG="/home/coalesce/coa-config"
 
 #echo "Writing config file to: '${COA_CONFIG}'."
 echo "$1" > $COA_CONFIG
