@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM ghcr.io/coalesceio/coa
+FROM coalescesoftware/coa-container
 
 COPY entrypoint.sh /entrypoint.sh
 
