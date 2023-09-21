@@ -7,4 +7,4 @@ echo "$1" > $COA_CONFIG
 # cat $COA_CONFIG
 
 shift
-/usr/local/bin/entrypoint.sh --config $COA_CONFIG $@
+node coa.js --config $COA_CONFIG $@
